@@ -4,6 +4,17 @@
 
 **Stack:** Node.js · Express · MongoDB (Mongoose) · JWT Auth · React (Vite) · React Router
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://customer-registry-hem187.vercel.app)
+[![API](https://img.shields.io/badge/API-Render-46E3B7?style=for-the-badge&logo=render)](https://customer-registry-api.onrender.com/api/health)
+[![GitHub](https://img.shields.io/badge/GitHub-hem187%2Fcustomer--registry-181717?style=for-the-badge&logo=github)](https://github.com/hem187/customer-registry)
+
+### 🔑 Demo Login Credentials
+| Role | Email | Password |
+|---|---|---|
+| 👑 Admin | `admin@ccr.test` | `password123` |
+| 🧑‍💼 Agent | `agent@ccr.test` | `password123` |
+| Register as customer | — | — |
+
 ---
 
 ## ✨ Features

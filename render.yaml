@@ -10,9 +10,8 @@ services:
         value: production
       - key: PORT
         value: 10000
-      - key: MONGO_URI
-        sync: false          # set this manually in the Render dashboard
       - key: JWT_SECRET
-        sync: false          # set this manually in the Render dashboard
+        value: customer-registry-demo-secret-change-in-prod
       - key: CLIENT_ORIGIN
-        sync: false          # set to your Vercel URL after deploying the frontend
+        value: https://customer-registry-hem187.vercel.app
+      # MONGO_URI intentionally omitted → falls back to MongoMemoryServer automatically

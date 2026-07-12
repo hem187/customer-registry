@@ -37,7 +37,23 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 
-connectDB().then(() => {
+const User = require('./models/User');
+
+async function seedDemoAccounts() {
+  const demos = [
+    { name: 'Admin',        email: 'admin@ccr.test', password: 'password123', role: 'admin' },
+    { name: 'Sam Agent',    email: 'agent@ccr.test', password: 'password123', role: 'agent' },
+    { name: 'Priya Sharma', email: 'priya@ccr.test', password: 'password123', role: 'agent' },
+  ];
+  for (const d of demos) {
+    const exists = await User.findOne({ email: d.email });
+    if (!exists) await User.create(d);
+  }
+  console.log('🌱  Demo accounts ready (admin@ccr.test / agent@ccr.test — password123)');
+}
+
+connectDB().then(async () => {
+  await seedDemoAccounts();
   app.listen(PORT, () => {
     console.log(`Customer Care Registry API listening on http://localhost:${PORT}`);
   });
