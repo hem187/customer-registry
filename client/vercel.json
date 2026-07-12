@@ -5,6 +5,6 @@
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "env": {
-    "VITE_API_URL": "https://customer-registry-api.onrender.com/api"
+    "VITE_API_URL": "https://customer-registry-sn17.onrender.com/api"
   }
 }
