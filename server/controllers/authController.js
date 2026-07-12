@@ -2,7 +2,8 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
 function signToken(user) {
-  return jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, {
+  const secret = process.env.JWT_SECRET || 'customer-care-registry-default-demo-secret-key-xyz987';
+  return jwt.sign({ id: user._id, role: user.role }, secret, {
     expiresIn: '7d',
   });
 }
