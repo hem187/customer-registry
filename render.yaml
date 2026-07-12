@@ -13,5 +13,5 @@ services:
       - key: JWT_SECRET
         value: customer-registry-demo-secret-change-in-prod
       - key: CLIENT_ORIGIN
-        value: https://customer-registry-hem187.vercel.app
+        value: https://customer-registry-lilac.vercel.app
       # MONGO_URI intentionally omitted → falls back to MongoMemoryServer automatically
